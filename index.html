@@ -9,24 +9,71 @@
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header">
-    <p class="site-title"><a href="index.html">Our Portfolio Site</a></p>
-    <nav aria-label="Main">
+  <header class="site-header" id="site-header" hidden>
+    <p class="site-title"><a href="index.html">The Six Hosts</a></p>
+    <nav aria-label="Main navigation">
       <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#rebecca">Rebecca</a></li>
+        <li><a href="#vincent">Vincent</a></li>
+        <li><a href="#zaki">Zaki</a></li>
+        <li><a href="#lorna">Lorna</a></li>
+        <li><a href="#olivia">Olivia</a></li>
+        <li><a href="#reid">Reid</a></li>
       </ul>
     </nav>
+    <button class="hat-change" id="change-hat" type="button">Choose another hat</button>
   </header>
 
   <main id="main">
-    <h1>Welcome</h1>
-    <p>This is your group's starter site. Nothing here is final.</p>
-    <p>Fill in your planning Doc, then leave a comment that starts with
-      <code>@agent build</code> to have the agent replace this page with your own.</p>
+    <section class="hat-picker" id="hat-picker" aria-labelledby="choice-title">
+      <p class="eyebrow">A warm welcome, traveler</p>
+      <h1 id="choice-title">Choose your hat</h1>
+      <p>Pick a white hat for the sunlit trail, or a black hat for the midnight ride. Your choice sets the look of the site.</p>
+      <div class="hat-options">
+        <button class="hat-button white-hat" type="button" data-theme="light">Choose the white hat</button>
+        <button class="hat-button black-hat" type="button" data-theme="dark">Choose the black hat</button>
+      </div>
+    </section>
+
+    <div class="site-content" id="site-content" hidden>
+      <section class="welcome-panel" id="home" aria-labelledby="welcome-title">
+        <p class="eyebrow">Pull up a chair</p>
+        <h1 id="welcome-title" tabindex="-1">Meet the Six Hosts</h1>
+        <p>Welcome to our corner of the frontier. Get to know the hosts and the subjects that keep them curious.</p>
+      </section>
+
+      <section class="host-card" id="rebecca" aria-labelledby="rebecca-title">
+        <h2 id="rebecca-title">Host - Rebecca</h2>
+        <p class="host-loop">Loop - International Studies &amp; Economics</p>
+        <img class="host-image" src="images/Rebecca_Image" alt="Rebecca, one of the Six Hosts">
+      </section>
+      <section class="host-card" id="vincent" aria-labelledby="vincent-title">
+        <h2 id="vincent-title">Host - Vincent</h2>
+        <p class="host-loop">Loop - Statistics &amp; Math</p>
+      </section>
+      <section class="host-card" id="zaki" aria-labelledby="zaki-title">
+        <h2 id="zaki-title">Host - Zaki</h2>
+        <p class="host-loop">Loop - Classical Languages</p>
+      </section>
+      <section class="host-card" id="lorna" aria-labelledby="lorna-title">
+        <h2 id="lorna-title">Host - Lorna</h2>
+        <p class="host-loop">Loop - Psychology</p>
+      </section>
+      <section class="host-card" id="olivia" aria-labelledby="olivia-title">
+        <h2 id="olivia-title">Host - Olivia</h2>
+        <p class="host-loop">Loop - Communication &amp; Media</p>
+      </section>
+      <section class="host-card" id="reid" aria-labelledby="reid-title">
+        <h2 id="reid-title">Host - Reid</h2>
+        <p class="host-loop">Loop - Political Science</p>
+      </section>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <p>Built by our group with help from an AI agent.</p>
+  <footer class="site-footer" id="site-footer" hidden>
+    <p>The Six Hosts · A little frontier spirit, a lot of curiosity.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
